@@ -1,0 +1,5 @@
+library("biomaRt")
+phytozome = useMart('phytozome_mart', host="phytozome.jgi.doe.gov", path ="/biomart/martservice/", dataset = 'phytozome')
+testdata = getBM(attributes="gene_description", filters = "organism_id", values ="314", mart = phytozome)
+biomaRt::getBMlist()
+listAttributes(phytozome)
